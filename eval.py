@@ -9,9 +9,9 @@ model_name = str(sys.argv[2])
 N_plus = 1283
 
 model_dict = {
-    'b1':('models/sunglasses_bd_net.h5', 'models/repaired_sunglasses_bd_net.h5'), 
-    'b2':('models/multi_trigger_multi_target_bd_net.h5', 'models/repaired_multi_trigger_multi_target_bd_net.h5'),
-    'b3':('models/anonymous_bd_net.h5', 'models/repaired_anonymous_bd_net.h5')
+    'g1':('models/sunglasses_bd_net.h5', 'models/repaired_sunglasses_bd_net.h5'), 
+    'g2':('models/multi_trigger_multi_target_bd_net.h5', 'models/repaired_multi_trigger_multi_target_bd_net.h5'),
+    'g3':('models/anonymous_bd_net.h5', 'models/repaired_anonymous_bd_net.h5')
 }
 
 def data_loader(filepath):
