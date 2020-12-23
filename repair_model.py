@@ -59,7 +59,7 @@ def pruning(model, x_valid, y_valid):
     clean_label = np.argmax(model.predict(x_valid), axis=1)
     class_accu = np.mean(np.equal(clean_label, y_valid)) * 100
 
-    print('Classification accuracy:', class_accu)
+    # print('Classification accuracy:', class_accu)
 
     current_accu = class_accu
     weights_prune, bias_prune = weightsDict['conv_3'], biasDict['conv_3']
@@ -72,7 +72,7 @@ def pruning(model, x_valid, y_valid):
         prune_label = np.argmax(model.predict(x_valid), axis=1)
         current_accu = np.mean(np.equal(prune_label, y_valid)) * 100
         accurancy[i] = current_accu
-        print("After pruning {} neuro the accuracy is {}".format(contribution_sorted[i][1], current_accu))
+        # print("After pruning {} neuro the accuracy is {}".format(contribution_sorted[i][1], current_accu))
         i += 1
     
     return model
