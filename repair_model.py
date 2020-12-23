@@ -67,7 +67,7 @@ def pruning(model, x_valid, y_valid):
     weights_prune, bias_prune = weightsDict['conv_3'], biasDict['conv_3']
     i = 0
 
-    while current_accu > class_accu - 4 and i < PRUNE_LIMIT:
+    while i < PRUNE_LIMIT:
         weights_prune[:, :, :, contribution_sorted[i][1]] = np.zeros(np.shape(weights_prune[:, :, :, contribution_sorted[i][1]]))
         bias_prune[contribution_sorted[i][1]] = 0
         model.get_layer('conv_3').set_weights((weights_prune, bias_prune))
