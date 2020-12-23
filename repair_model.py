@@ -8,10 +8,6 @@ model_path = str(sys.argv[1])
 clean_path = str(sys.argv[2])
 save_model = str(sys.argv[3])
 save_weights = str(sys.argv[4])
-# model_path = 'models\sunglasses_bd_weights.h5'
-# clean_path = 'data\clean_validation_data.h5'
-# save_model = 'models\G1_net.h5'
-# save_weights = 'models\G1_weights.h5'
 
 def prunedNet():
     x = keras.Input(shape=(55, 47, 3), name='input')
